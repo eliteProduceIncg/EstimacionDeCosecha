@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Estimacion de Cosecha </title>
+</head>
+<body style="background-color: bisque;">
+    <div class="fondo">
+        <div class="container">
+            <div class="center-div">
+                <div class="card" style="width: 30rem;">
+                    <div class="card-body">
+                        <h2 class="card-title">Estimacion de Cosecha</h2>
+                        <p class="card-text">Formulario para el registro de producción proyectada de huertas propias o de terceros compradas en pie.
+                        </p>
+                        <form action="https://api.sheetmonkey.io/form/4tecpm51scBKTumJRR6Pom" method="post">
+                            <input 
+                            type="hidden"
+                            name="x-sheetmonkey-insert-worksheet"
+                            value="EstimacionCosecha"
+                            />
+                            <input 
+                            type="hidden" 
+                            name="x-sheetmonkey-redirect" 
+                            value="https://eliteproduceincg.github.io/EstimacionDeCosecha/" 
+                            />
+                            <input type="hidden" name="Marca temporal" value="x-sheetmonkey-current-date-time" />
+                            <input type="hidden" name="Marca temporal" value="x-sheetmonkey-current-date-time" />
+                            <div class="mb-3">
+                                <label for="Acopiador" class="form-label">Acopiador *</label>
+                                <input type="text" class="form-control" id="Acopiador" name="Acopiador" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="Id Huerta" class="form-label">Id Huerta *</label>
+                                <p style="font-size: small;">Huertas propias</p>
+                                <select class="form-select" id="IdHuerta" name="Id Huerta" required>
+                                    <option selected>Elige...</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Huerta" class="form-label">Huerta *</label>
+                                <select class="form-select" id="Huerta" name="Huerta" required>
+                                    <option selected>Elige...</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Titularidad" class="form-label">Titularidad *</label>
+                                <select class="form-select" id="Titularidad" name="Titularidad" required>
+                                    <option selected>Elige...</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Temporada" class="form-label">Temporada *</label>
+                                <p style="font-size: small;">Formato: año anterior al empacado - 
+                                    año de empacado. Lo años son separados por un guion corto . 
+                                    Ejemplo, año de empacado 2024: 2023 - 2024</p>
+                                <input type="text" class="form-control" id="Temporada" name="Temporada" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Fecha de muestreo" class="form-label">Fecha de muestreo *</label>
+                                <input type="date" class="form-control" id="fechaMuestreo" name="Fecha de muestreo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Fecha proyectada inicio de cosecha" class="form-label">Fecha proyectada inicio de cosecha *</label>
+                                <input type="date" class="form-control" id="fechaInicioCosecha" name="Fecha proyectada inicio de cosecha" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Fecha proyectada fin de cosecha" class="form-label">Fecha proyectada fin de cosecha *</label>
+                                <input type="date" class="form-control" id="fechaFinCosecha" name="Fecha proyectada fin de cosecha" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Unidad de cosecha" class="form-label">Unidad de cosecha *</label>
+                                <select class="form-select" id="unidadCosecha" name="Unidad de cosecha" required>
+                                    <option selected>Elige...</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Destino" class="form-label">Cosecha proyectada *</label>
+                                <p style="font-size: small;">País destino de los embarques</p>
+                                <input type="text" class="form-control" id="cosechaProyectada" name="Cosecha proyectada" required>
+                            </div>
+                            <input type="submit"  value="Submit" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
