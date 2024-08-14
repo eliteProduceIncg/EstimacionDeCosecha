@@ -57,3 +57,18 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${r
             });
         })
         .catch(error => console.error('Error fetching data: '));
+
+
+const rangePaises = 'Catalogos!M2:M';
+fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${rangePaises}?key=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+        const selectElement = document.getElementById('paisDestino');
+        data.values.forEach(row => {
+            const option = document.createElement('option');
+            option.textContent = row[0];
+            option.value = row[0];
+            selectElement.appendChild(option);
+        });
+    })
+    .catch(error => console.error('Error fetching data: '));
